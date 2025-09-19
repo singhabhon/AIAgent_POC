@@ -18,14 +18,14 @@ async def main():
                                                   args=[
                                                       "-y",
                                                       "@modelcontextprotocol/server-filesystem",
-                                                      "/Users/rahulshetty/agenticai/AgenticAIAutoGen"],
+                                                      "c:\\Users\\singh\\AIAgent_POC"],
                                                   read_timeout_seconds=60
                                                   )
 
     fs_workbench = McpWorkbench( filesystem_server_params )
 
     async with fs_workbench as fs_wb:
-        model_client = OpenAIChatCompletionClient( model="gpt-4o" )
+        model_client = OpenAIChatCompletionClient( model="gpt-5-mini" )
 
         math_tutor = AssistantAgent( name="MathTutor", model_client=model_client, workbench=fs_wb,
                                     system_message="You are helpful math tutor.Help the user solve math problems step "

@@ -17,7 +17,7 @@ async def main() -> None:
     model_client = OpenAIChatCompletionClient(
         model="gpt-5-mini",
         parallel_tool_calls=False,
-        api_key=openai_api_key,  # type: ignore
+        api_key=openai_api_key,  
     )
     params = StdioServerParams(
         command="npx",
@@ -37,7 +37,7 @@ async def main() -> None:
 
         user_proxy = UserProxyAgent( name="Student" )
 
-        termination = TextMentionTermination("TERMINATE")
+        termination = TextMentionTermination("Thank you")
         team = RoundRobinGroupChat(participants=[user_proxy, mcp_agent], termination_condition=termination)
         await Console(
             team.run_stream(

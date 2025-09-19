@@ -1,0 +1,6 @@
+Algebra Lesson: Simple Addition
+
+Problem: What is 3 + 3?
+Solution: The sum of 3 + 3 is 6.
+
+Explanation: Addition is a basic arithmetic operation that represents combining collections of objects together into a larger collection. When you add 3 and 3 together, you are combining them to make 6.
